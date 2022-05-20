@@ -12,7 +12,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
       {
         name: 'User',
         schema: UsersSchema,
-      }
+      },
     ]),
     PassportModule,
     JwtModule.register({

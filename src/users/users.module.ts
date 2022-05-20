@@ -11,7 +11,7 @@ import { AuthModule } from 'src/auth/auth.module';
       {
         name: 'User',
         schema: UsersSchema,
-      }
+      },
     ]),
     AuthModule,
   ],
