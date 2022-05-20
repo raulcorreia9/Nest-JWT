@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { PassportModule } from '@nestjs/passport';
 import { UsersSchema } from 'src/users/schemas/user.schemas';
 import { AuthService } from './auth.service';
+import { JwtStrategy } from './strategies/jwt.strategy';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { AuthService } from './auth.service';
       }
     })
   ],
-  providers: [AuthService],
+  //Onde se importam serviços
+  providers: [AuthService, JwtStrategy],
   //Exportação para conseguir utilizar AuthService em outros módulos
   exports: [AuthService]
 })
